@@ -1,9 +1,9 @@
 Proceso GuiaEjercicios
 	
 	//Otras variables
-	Definir opcion como Entero;
+	Definir menuO como Entero;
 	
-	opcion := 0;
+	menuO := 0;
 	
 	//Variables de Primer Ejercicio
 	Definir D Como Entero;
@@ -65,12 +65,17 @@ Proceso GuiaEjercicios
 	lim2 := 35;
 	tiempo := 0;
 	
+	Escribir "BIENVENIDO";
+	Escribir "";
+	Escribir "Ingrese una opcion para resolver el ejercicio deseado";
+	Escribir " 1. Ejercicio 1, saber la fecha de mañana a partir de una fecha dada";
+	Escribir " 2. Ejercicio 2, calculadora de operaciones básicas";
+	Escribir " 3. Ejercicio 3, saber la hora actual a partir de una hora dada";
+	Escribir " 4. Ejercicio 4, realizar operaciones varias";
 	
+	Leer menuO;
 	
-	
-	
-	
-	Segun opcion Hacer
+	Segun menuO Hacer
 		1:
 			Escribir "Por favor, digite un día";
 			Leer D;
