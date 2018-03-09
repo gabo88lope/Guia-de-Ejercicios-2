@@ -17,15 +17,34 @@ Proceso GuiaEjercicios
 	A <- 0;
 	
 	//Variables de Segundo Ejercicio
-	Definir Number1 Como Entero;
-	Definir Number2 Como Entero;
+	Definir Number1 Como Real;
+	Definir Number2 Como Real;
 	Definir Decision Como Entero;
 	
-	Number1 <- 0;
-	Number2 <- 0;
+	Number1 <- 0.0;
+	Number2 <- 0.0;
 	Decision <- 0;
 	
 	//Variables de Tercer Ejercicio
+	Definir HH Como Entero;
+	Definir MM Como Entero;
+	Definir SS Como Entero;
+	Definir LimHH Como Entero;
+	Definir LimMM Como Entero;
+	Definir LimSS Como Entero;
+	Definir MinxHr Como Entero;
+	Definir CMN Como Entero;
+	Definir TotalMin Como Entero;
+	
+	HH<-0;
+	MM<-0;
+	SS<-0;
+	LimHH<-23;
+	LimMM<-59;
+	LimSS<-59;
+	MinxHr<-60;
+	CMN<-0;
+	TotalMin<-0;
 	
 	
 	//Variables de Cuarto Ejercicio
@@ -444,7 +463,68 @@ Proceso GuiaEjercicios
 			FinSegun
 			
 		3:
+			Escribir "Por favor, introduzca una hora en el siguiente formato:";
+			Escribir "HH:MM:SS";
+			Escribir "-------------------------------------------------------";
+			Escribir "La hora debe introducirse en  formato militar (24hrs)";
 			Escribir "";
+			Escribir "Presione cualquier tecla para continuar...";
+			Esperar Tecla;
+			Borrar Pantalla;
+			
+			Escribir "Digite la hora en el formato indicado";
+			Escribir "Horas";
+			Leer HH;
+			Si HH>=1 & HH<=LimHH Entonces
+				Escribir "Ahora digite los minutos";
+				Leer MM;
+				Si MM>=0 & MM<=LimMM Entonces
+					Escribir "Por ultimo digite los segundos";
+					Leer SS;
+					Si SS>=1 & SS<=LimSS Entonces
+						Escribir "Su hora ingresada fue:";
+						Escribir HH,":",MM,":",SS;
+						Escribir "";
+						Escribir "Introduzca una nueva cantidad de minutos";
+						Leer CMN;
+						TotalMin<-MM+CMN;				
+						Si TotalMin>59 & TotalMin<=119 Entonces
+							Escribir "Su nueva hora es ",HH+1,":",TotalMin-MinxHr,":",SS;
+						SiNo
+							Si TotalMin<59 Entonces
+								Escribir "Su nueva hora es ",HH,":",CMN+MM,":",SS;
+							FinSi
+						FinSi
+						
+						Si TotalMin>=120 & TotalMin<=179 Entonces
+							Escribir "Su nueva hora es ",HH+2,":",TotalMin-(MinxHr*2),":",SS;
+						SiNo
+							Si TotalMin>=180 & TotalMin<=239 Entonces
+								Escribir "Su nueva hora es ",HH+3,":",TotalMin-(MinxHr*3),":",SS;
+							SiNo
+								Si TotalMin>=240 & TotalMin<=299 Entonces
+									Escribir "Su nueva hora es ",HH+4,":",TotalMin-(MinxHr*4),":",SS;
+								SiNo
+									Si TotalMin>=300 & TotalMin<=359 Entonces
+										Escribir "Su nueva hora es ",HH+5,":",TotalMin-(MinxHr*5),":",SS;
+									Sino
+										Si TotalMin>=360 & TotalMin<=419 Entonces
+											Escribir "Su nueva hora es ",HH+6,":",TotalMin-(MinxHr*6),":",SS;
+										FinSi
+									FinSi
+								FinSi
+							FinSi
+						FinSi
+						
+					Sino
+						Escribir "Introduzca una cantidad de segundos válido";
+					FinSi
+				SiNo
+					Escribir "Introduzca una cantidad de minutos válido";
+				FinSi
+			SiNo
+				Escribir "Introduzca una hora militar correcta";
+			FinSi
 		4:
 			
 			Escribir "Ingrese su opcion";
