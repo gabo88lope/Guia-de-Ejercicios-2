@@ -25,6 +25,51 @@ Proceso GuiaEjercicios
 	Number2 <- 0;
 	Decision <- 0;
 	
+	//Variables de Tercer Ejercicio
+	
+	
+	//Variables de Cuarto Ejercicio
+	Definir opcion como Entero;
+	Definir angulo como Entero;
+	Definir anguloRecto como Entero;
+	Definir temp como Real;
+	Definir tempEbu como Entero;
+	Definir num como Real;
+	Definir sumPos como Real;
+	Definir sumNeg como Real;
+	Definir numX como Real;
+	Definir numY como Real;
+	Definir numZ como Real;
+	Definir numP como Real;
+	Definir lim como Entero;
+	Definir distancia como Real;
+	Definir lim1 como Entero;
+	Definir lim2 como Entero;
+	Definir tiempo como Entero;
+	
+	opcion := 0;
+	angulo := 0;
+	anguloRecto := 0.0;
+	temp := 0.0;
+	tempEbu := 100;
+	num := 0.0;
+	sumPos := 0.0;
+	sumNeg := 0.0;
+	numX := 0.0;
+	numY := 0.0;
+	numZ := 0.0;
+	numP := 0.0;
+	lim := 20;
+	distancia := 0.0;
+	lim1 := 20;
+	lim2 := 35;
+	tiempo := 0;
+	
+	
+	
+	
+	
+	
 	Segun opcion Hacer
 		1:
 			Escribir "Por favor, digite un día";
@@ -396,41 +441,6 @@ Proceso GuiaEjercicios
 		3:
 			Escribir "";
 		4:
-			Definir opcion como Entero;
-			Definir angulo como Entero;
-			Definir anguloRecto como Entero;
-			Definir temp como Real;
-			Definir tempEbu como Entero;
-			Definir num como Real;
-			Definir sumPos como Real;
-			Definir sumNeg como Real;
-			Definir numX como Real;
-			Definir numY como Real;
-			Definir numZ como Real;
-			Definir numP como Real;
-			Definir lim como Entero;
-			Definir distancia como Real;
-			Definir lim1 como Entero;
-			Definir lim2 como Entero;
-			Definir tiempo como Entero;
-			
-			opcion := 0;
-			angulo := 0;
-			anguloRecto := 0.0;
-			temp := 0.0;
-			tempEbu := 100;
-			num := 0.0;
-			sumPos := 0.0;
-			sumNeg := 0.0;
-			numX := 0.0;
-			numY := 0.0;
-			numZ := 0.0;
-			numP := 0.0;
-			lim := 20;
-			distancia := 0.0;
-			lim1 := 20;
-			lim2 := 35;
-			tiempo := 0;
 			
 			Escribir "Ingrese su opcion";
 			Escribir "";
